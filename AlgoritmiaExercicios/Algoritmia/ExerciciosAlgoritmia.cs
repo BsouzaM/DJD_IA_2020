@@ -55,5 +55,18 @@ namespace Algoritmia
             Console.WriteLine($"Weapon Name: {0}\n Rarity: {1}\n Description: {2}\n Target Class: {3}\n Is this weapon Two-Hand? {4}\n Damage: {5}", 
                 name, rarity, description, targetClass, isTwoHand, damage);
         }
+
+        public void GeeGee()
+        {
+            int player = 100; 
+            int fatalBlow = player;
+
+            Console.WriteLine($"Player Health: {0}", player);
+            Console.WriteLine("A wild monster appeared!");
+            Console.WriteLine("As you try to attack the monster, you got stun for 30 seconds!");
+            player = player - fatalBlow;
+            Console.WriteLine($"Your player got a Face Slap! HP: {0}", player);
+            Console.WriteLine($"You are dead!");
+        }
     }
 }
