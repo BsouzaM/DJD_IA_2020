@@ -1,5 +1,9 @@
 # DJD_IA_2020
 
+![Bob, the Barrel](https://i.imgur.com/AUCjiR5.png)
+
+This is Bob, the Barrel. He gives me luck every time I write an algorithm. If I fail, the next algorithm will always be better. Praise the Barrel!
+
 # Author
 * **Bernardo Medeiros** - [BsouzaM Github](https://github.com/BsouzaM)
 
@@ -9,12 +13,4 @@
 
 # License
 
-MIT License
-
-Copyright (c) 2020 - 2023 Bernardo Souza de Medeiros
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+* You can check LICENSE in the repository files.
