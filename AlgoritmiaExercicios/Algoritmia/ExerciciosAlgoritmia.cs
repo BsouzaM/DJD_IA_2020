@@ -44,7 +44,16 @@ namespace Algoritmia
 
         public void Frostmourne()
         {
-            //
+            string name, rarity, description, targetClass;
+            bool isTwoHand = true;
+            int damage = 35000;
+            name = "Frostmourne";
+            rarity = "Legendary";
+            description = "Hail to the king, baby!";
+            targetClass = "Death Knight";
+
+            Console.WriteLine($"Weapon Name: {0}\n Rarity: {1}\n Description: {2}\n Target Class: {3}\n Is this weapon Two-Hand? {4}\n Damage: {5}", 
+                name, rarity, description, targetClass, isTwoHand, damage);
         }
     }
 }
