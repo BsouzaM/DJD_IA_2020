@@ -12,27 +12,26 @@ namespace Algoritmia
 
             Thread.Sleep(2000);
             eA.LetTheGamesBegin();
-            Console.WriteLine("\n");
+            Console.WriteLine("");
 
             Thread.Sleep(2000);
             eA.Noob();
-            Console.WriteLine("\n");
+            Console.WriteLine("");
 
             Thread.Sleep(2000);
             eA.EasyPeasy();
-            Console.WriteLine("\n");
+            Console.WriteLine("");
 
             Thread.Sleep(2000);
             eA.ForAzeroth();
-            Console.WriteLine("\n");
+            Console.WriteLine("");
 
             Thread.Sleep(2000);
             eA.Frostmourne();
-            Console.WriteLine("\n");
+            Console.WriteLine("");
 
             Thread.Sleep(2000);
             eA.GeeGee();
-            Console.WriteLine("\n");
 
             Thread.Sleep(5000);
         }
