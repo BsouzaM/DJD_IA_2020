@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Algoritmia
@@ -76,6 +77,22 @@ namespace Algoritmia
             player = player - fatalBlow;
             Console.WriteLine("Your player got a Face Slap! HP: {0}", player);
             Console.WriteLine("You are dead!");
+        }
+        public void LuckyBastard()
+        {
+            #region Hard Coded #1
+            /*
+             int playerHP = 100;
+             int a1, a2;
+             Random r = new Random();
+             a1 = playerHP - 1;
+             a2 = playerHP - 2;
+             playerHP = 198 - (a1 + a2);
+            */
+            #endregion
+            int playerHP = 100;
+
+            Console.WriteLine("HP {0}", playerHP);
         }
     }
 }

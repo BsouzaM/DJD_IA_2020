@@ -10,6 +10,9 @@ namespace Algoritmia
             ExerciciosAlgoritmia eA = new ExerciciosAlgoritmia();
             Console.WriteLine("Hello World!");
 
+            eA.LuckyBastard();
+            eA.LuckyBastard();
+
             Thread.Sleep(2000);
             eA.LetTheGamesBegin();
             Console.WriteLine("");
