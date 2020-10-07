@@ -17,7 +17,7 @@ namespace Algoritmia
         public void Noob()
         {
             string player = "#Fiinz";
-            Console.WriteLine($"You're such a Noob {player}! It's always good to have newbies around here!");
+            Console.WriteLine("You're such a Noob {0}! It's always good to have newbies around here!", player);
         }
 
         public void EasyPeasy()
@@ -39,12 +39,12 @@ namespace Algoritmia
             level = 60;
             gender = 'M';
 
-            Console.WriteLine($"Nickname: {nickname}\n " +
-                $"Level: {level}\n " +
-                $"Race: {race}\n " +
-                $"Gender: {gender}\n " +
-                $"Faction: {faction}\n " +
-                $"Class: {theClass}");
+            Console.WriteLine("Nickname: {0}\n " +
+                "Level: {1}\n " +
+                "Race: {2}\n " +
+                "Gender: {3}\n " +
+                "Faction: {4}\n " +
+                "Class: {5}", nickname, level, race, gender, faction, theClass);
         }
 
         public void Frostmourne()
