@@ -10,8 +10,6 @@ namespace Algoritmia
             ExerciciosAlgoritmia eA = new ExerciciosAlgoritmia();
             Console.WriteLine("Hello World!");
 
-            eA.LuckyBastard();
-
             Thread.Sleep(2000);
             eA.LetTheGamesBegin();
             Console.WriteLine("");
@@ -34,8 +32,15 @@ namespace Algoritmia
 
             Thread.Sleep(2000);
             eA.GeeGee();
+            Console.WriteLine("");
 
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
+            eA.LuckyBastard();
+            Console.WriteLine("");
+
+            Thread.Sleep(2000);
+            eA.Vegito();
+            Console.WriteLine("");
         }
     }
 }

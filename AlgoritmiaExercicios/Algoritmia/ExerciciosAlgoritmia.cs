@@ -101,5 +101,18 @@ namespace Algoritmia
 
             Console.WriteLine("Lucky Bastard!");
         }
+        public void Vegito()
+        {
+            Random r = new Random();
+            int cAverageAtk, cAverageDef, cAverageInt;
+
+            cAverageAtk = (r.Next(1, 100) + r.Next(1, 351)) / 2;
+            cAverageDef = (r.Next(1, 100) + r.Next(1, 156)) / 2;
+            cAverageInt = (r.Next(1, 1001) + r.Next(1, 851)) / 2;
+
+            Console.WriteLine("Average of Attack: {0}\n" +
+                "Average of Defense: {1}\n" +
+                "Average of Intellect: {2}", cAverageAtk, cAverageDef, cAverageInt);
+        }
     }
 }
