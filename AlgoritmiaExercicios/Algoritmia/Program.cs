@@ -11,7 +11,6 @@ namespace Algoritmia
             Console.WriteLine("Hello World!");
 
             eA.LuckyBastard();
-            eA.LuckyBastard();
 
             Thread.Sleep(2000);
             eA.LetTheGamesBegin();

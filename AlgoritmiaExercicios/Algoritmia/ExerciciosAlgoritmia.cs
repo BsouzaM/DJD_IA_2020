@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Runtime.Serialization;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -80,19 +81,25 @@ namespace Algoritmia
         }
         public void LuckyBastard()
         {
-            #region Hard Coded #1
-            /*
-             int playerHP = 100;
-             int a1, a2;
-             Random r = new Random();
-             a1 = playerHP - 1;
-             a2 = playerHP - 2;
-             playerHP = 198 - (a1 + a2);
-            */
-            #endregion
-            int playerHP = 100;
+            Random r = new Random();
+            int hp = 100;
 
-            Console.WriteLine("HP {0}", playerHP);
+            int dmg = r.Next(1, hp - 3);
+            Console.WriteLine("Damage: {0}", dmg);
+            hp = hp - dmg;
+            Console.WriteLine("HP: {0}", hp);
+
+            dmg = r.Next(1, hp - 2);
+            Console.WriteLine("Damage: {0}", dmg);
+            hp = hp - dmg;
+            Console.WriteLine("HP: {0}", hp);
+
+            dmg = hp - 1;
+            Console.WriteLine("Damage: {0}", dmg);
+            hp = hp - dmg;
+            Console.WriteLine("HP: {0}", hp);
+
+            Console.WriteLine("Lucky Bastard!");
         }
     }
 }
