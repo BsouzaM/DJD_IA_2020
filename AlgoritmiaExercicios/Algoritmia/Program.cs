@@ -12,15 +12,13 @@ namespace Algoritmia
             Thread.Sleep(3000);
             Console.Clear();
 
-            eA.LostintheMap();
-
             #region Let The Games Begin
             eA.LetTheGamesBegin();
             Console.WriteLine("");
             #endregion
             
             #region Noob
-            Thread.Sleep(20000);
+            Thread.Sleep(2000);
             eA.Noob();
             Console.WriteLine("");
             #endregion
