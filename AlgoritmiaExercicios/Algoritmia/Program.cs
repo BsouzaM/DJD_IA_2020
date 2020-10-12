@@ -9,38 +9,78 @@ namespace Algoritmia
         {
             ExerciciosAlgoritmia eA = new ExerciciosAlgoritmia();
             Console.WriteLine("Hello World!");
+            Thread.Sleep(3000);
+            Console.Clear();
 
-            Thread.Sleep(2000);
+            eA.LostintheMap();
+
+            #region Let The Games Begin
             eA.LetTheGamesBegin();
             Console.WriteLine("");
-
-            Thread.Sleep(2000);
+            #endregion
+            
+            #region Noob
+            Thread.Sleep(20000);
             eA.Noob();
             Console.WriteLine("");
-
+            #endregion
+            
+            #region Easy Peasy
             Thread.Sleep(2000);
             eA.EasyPeasy();
             Console.WriteLine("");
-
-            Thread.Sleep(2000);
+            #endregion
+            
+            #region For Azeroth
+            Thread.Sleep(3000);
+            Console.Clear();
             eA.ForAzeroth();
             Console.WriteLine("");
-
+            #endregion
+            
+            #region Frostmourne
             Thread.Sleep(2000);
             eA.Frostmourne();
             Console.WriteLine("");
-
+            #endregion
+            
+            #region Gee Gee
             Thread.Sleep(2000);
             eA.GeeGee();
             Console.WriteLine("");
-
-            Thread.Sleep(2000);
+            #endregion
+            
+            #region 
+            Thread.Sleep(3000);
+            Console.Clear();
             eA.LuckyBastard();
             Console.WriteLine("");
-
+            #endregion
+            
+            #region Vegito
             Thread.Sleep(2000);
             eA.Vegito();
             Console.WriteLine("");
+            #endregion
+            
+            #region Let's Get Pumped
+            Thread.Sleep(2000);
+            eA.LetsGetPumped();
+            Console.WriteLine("");
+            #endregion
+            
+            #region Roll
+            Thread.Sleep(3000);
+            Console.Clear();
+            eA.Roll();
+            Console.WriteLine("");
+            #endregion
+
+            #region Lost in the Map
+            Thread.Sleep(2000);
+            eA.LostintheMap();
+            Console.WriteLine("");
+            #endregion
         }
     }
 }
