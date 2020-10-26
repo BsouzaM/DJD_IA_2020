@@ -5,11 +5,14 @@ using System.IO.Pipes;
 using System.Runtime.Serialization;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 
 namespace Algoritmia
 {
     class ExerciciosAlgoritmia
     {
+
+
         public void LetTheGamesBegin()
         {
             Console.WriteLine("Game Started");
@@ -166,6 +169,70 @@ namespace Algoritmia
             }
 
             Console.WriteLine();
+        }
+        public void TimeOver()
+        {
+            for (int i = 99; i >= 0; i -= 1)
+            {
+                Console.WriteLine("{0}", i);
+                if (i == 0)
+                {
+                    Console.WriteLine("Game Over");
+                }
+            }
+        }
+
+        public void Even()
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+
+        public void KeepRandomizing()
+        {
+            Random r = new Random();
+            int n = r.Next(0, 100);
+
+            for (int i = 0; i < n; i++)
+            {
+                int coordX = r.Next(0, 100);
+                int coordY = r.Next(0, 100);
+                Console.WriteLine("Coordenada X: " + coordX);
+                Console.WriteLine("Coordenada Y: " + coordY);
+            }
+        }
+
+        public void BetweenWalls()
+        {
+            Random r = new Random();
+
+            for (int i = 0; i < 5; i++)
+            {
+                int n1 = r.Next(-101, 2);
+                int n2 = r.Next(-101, 2);
+
+                if (n1 > n2)
+                {
+                    Console.WriteLine("Maximum value of N1 between N2: {0} \n" +
+                        "Minimum Value of N1 between N2: {1}", Math.Min(n1, n2), Math.Max(n1, n2));
+                    Console.WriteLine("");
+                    // List all numbers of N1 between N2 here
+                    // Incompleto
+                }
+                else
+                {
+                    Console.WriteLine("Maximum value of N2 between N1: {0} \n" +
+                        "Minimum Value of N2 between N1: {1}", Math.Min(n2, n1), Math.Max(n2, n1));
+                    Console.WriteLine("");
+                    // List all numbers of N2 between N1 here
+                    // Incompleto
+                }
+            }
         }
     }
 }
