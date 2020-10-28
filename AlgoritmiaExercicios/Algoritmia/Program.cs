@@ -13,8 +13,7 @@ namespace Algoritmia
             Thread.Sleep(3000);
             Console.Clear();
 
-            eA.BetweenWalls();
-            Thread.Sleep(50000);
+            eA.LetsMove();
 
             #region Let The Games Begin
             eA.LetTheGamesBegin();
@@ -101,6 +100,13 @@ namespace Algoritmia
             eA.KeepRandomizing();
             Console.WriteLine("");
             #endregion
+
+            #region Between Walls
+            eA.BetweenWalls();
+            Thread.Sleep(2000);
+            Console.WriteLine("");
+            #endregion
+
         }
     }
 }

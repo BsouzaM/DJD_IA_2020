@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Globalization;
 using System.IO.Pipes;
 using System.Runtime.Serialization;
 using System.Security.Cryptography;
@@ -9,7 +10,7 @@ using System.Threading;
 
 namespace Algoritmia
 {
-    class ExerciciosAlgoritmia
+    public class ExerciciosAlgoritmia
     {
 
 
@@ -211,28 +212,94 @@ namespace Algoritmia
         {
             Random r = new Random();
 
-            for (int i = 0; i < 5; i++)
-            {
-                int n1 = r.Next(-101, 2);
-                int n2 = r.Next(-101, 2);
+            int a = r.Next(1);
+            int b = r.Next(a, 100);
 
-                if (n1 > n2)
-                {
-                    Console.WriteLine("Maximum value of N1 between N2: {0} \n" +
-                        "Minimum Value of N1 between N2: {1}", Math.Min(n1, n2), Math.Max(n1, n2));
-                    Console.WriteLine("");
-                    // List all numbers of N1 between N2 here
-                    // Incompleto
-                }
-                else
-                {
-                    Console.WriteLine("Maximum value of N2 between N1: {0} \n" +
-                        "Minimum Value of N2 between N1: {1}", Math.Min(n2, n1), Math.Max(n2, n1));
-                    Console.WriteLine("");
-                    // List all numbers of N2 between N1 here
-                    // Incompleto
-                }
+            for (int i = a; i <= b; i++)
+            {
+                Console.WriteLine("Os valores entre {0} e {1} são: {2}", a, b, i);
             }
+        }
+
+        public void LetsMove()
+        {
+            Random r = new Random();
+            TileManagement t = new TileManagement();
+
+            int mapValueX, mapValueY;
+            ConsoleKeyInfo targetPos;
+
+            // Caso seja o utilizador a decidir o tamanho do mapa em X e Y:
+
+            // Console.WriteLine("Qual é o tamanho do mapa em X? ");
+            // mapValueX = int.Parse(Console.ReadLine());
+            // Console.WriteLine("Qual é o tamanho do mapa em Y? ");
+            // mapValueY = int.Parse(Console.ReadLine());
+
+            // Caso haja apenas um valor para X e Y:
+            mapValueX = 1000;
+            mapValueY = mapValueX;
+
+            int player = 0;
+            Console.WriteLine("O mapa será de {0} por {1}.", mapValueX, mapValueY);
+            Thread.Sleep(300);
+
+            Console.WriteLine("\nO personagem está na posição\nX: 0\nY: 0");
+            Thread.Sleep(300);
+            Console.Clear();
+
+            Console.WriteLine("\nA gerar o mapa...\n");
+            t.InitTiles(mapValueX, mapValueY);
+
+            Console.WriteLine("\nW, A, S ou D.\nPara onde você deseja movimentar o personagem?");
+
+
+            // Há um pequeno bug cada vez que eu pressiono uma tecla! Ela aparece, ao invés de não aparecer.
+            // E eu não sei como consertar.
+            do
+            {
+                int randPosX = r.Next(mapValueX);
+                int randPosY = r.Next(mapValueY);
+                targetPos = Console.ReadKey(true);
+
+                Console.WriteLine(" ");
+                switch (targetPos.Key)
+                {
+                    case ConsoleKey.D:
+                        player++;
+                        Console.WriteLine("O jogador andou para a direita, agora está na posição X: {0} ", randPosX);
+                        Console.WriteLine();
+                        break;
+
+                    case ConsoleKey.A:
+                        player--;
+                        Console.WriteLine("O jogador andou para a esquerda, agora está na posição X: {0} ", randPosX);
+                        Console.WriteLine();
+                        break;
+
+                    case ConsoleKey.S:
+                        player++;
+                        Console.WriteLine("O jogador andou para baixo, agora está na posição Y: {0} ", randPosY);
+                        Console.WriteLine();
+                        break;
+
+                    case ConsoleKey.W:
+                        player--;
+                        Console.WriteLine("O jogador andou para cima, agora está na posição Y: {0} ", randPosY);
+                        Console.WriteLine();
+                        break;
+
+                    case ConsoleKey.Q:
+                        // "Em C# não existe a possibilidade de voltar atrás em um número gerado aleatóriamente"
+                        // - Moderador do servidor do discord C#/Dot.NET
+                        Console.WriteLine("O jogador terminou na posição X em: {0} e na posição Y em: {1} ", randPosX, randPosY);
+                        Environment.Exit(0);
+                        break;
+                }
+                Console.WriteLine(targetPos.Key.ToString());
+            } while (targetPos.Key != ConsoleKey.Escape);
+
+            Thread.Sleep(12000);
         }
     }
 }
