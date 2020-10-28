@@ -13,8 +13,6 @@ namespace Algoritmia
             Thread.Sleep(3000);
             Console.Clear();
 
-            eA.LetsMove();
-
             #region Let The Games Begin
             eA.LetTheGamesBegin();
             Console.WriteLine("");
@@ -107,6 +105,11 @@ namespace Algoritmia
             Console.WriteLine("");
             #endregion
 
+            #region Lets Move
+            eA.LetsMove();
+            Thread.Sleep(2000);
+            Console.WriteLine("");
+            #endregion
         }
     }
 }
