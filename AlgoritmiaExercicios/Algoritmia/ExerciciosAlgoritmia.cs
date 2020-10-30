@@ -221,6 +221,10 @@ namespace Algoritmia
 
         public void LetsMove()
         {
+            // Moves a character's position frame by frame - wtf? Frame by frame significa runtime by runtime? Ou cada vez q eu pressiono um botão? Precisa ser explicado melhor.
+            // from the position (0, 0) -- O playerX e playerY começam a 0, 0;
+            // to a target random position in a map with 1000px x 1000px - Ao pressionar W, A, S ou D o player vai para uma posição aleatória
+
             Random r = new Random();
             TileManagement t = new TileManagement();
 
@@ -235,68 +239,93 @@ namespace Algoritmia
             // mapValueY = int.Parse(Console.ReadLine());
 
             // Caso haja apenas um valor para X e Y:
-            mapValueX = 1000;
+            mapValueX = 10;
             mapValueY = mapValueX;
 
             // O player começa em 0, 0 :D
             int playerX = 0;
             int playerY = 0;
-            Console.WriteLine("O mapa será de {0} por {1}.", mapValueX, mapValueY);
-            Thread.Sleep(300);
 
-            Console.WriteLine("\nO personagem está na posição\nX: 0\nY: 0");
-            Thread.Sleep(300);
             Console.Clear();
+            Console.WriteLine("O mapa será de {0} por {1}.", mapValueX, mapValueY);
+            Console.WriteLine("\nO personagem está na posição\nX: {0}\nY: {1}", playerX, playerY);
+
+            Console.WriteLine("\nPressione qualquer tecla para continuar");
+            Console.ReadKey();
 
             Console.WriteLine("\nA gerar o mapa...\n");
             t.InitTiles(mapValueX, mapValueY);
 
-            Console.WriteLine("\nW, A, S ou D.\nPara onde você deseja movimentar o personagem?");
+            Console.WriteLine("\nW, A, S ou D.\nWhere do you want to move your character?");
 
 
             // Há um pequeno bug cada vez que eu pressiono uma tecla! Ela aparece, ao invés de não aparecer.
             // E eu não sei como consertar.
-
             // Do-While para utilizar ConsoleKeys
             do
             {
                 targetPos = Console.ReadKey(true);
                 Console.WriteLine(" ");
+
                 switch (targetPos.Key)
                 {
                     case ConsoleKey.D:
-                        playerX++;
-                        Console.WriteLine("Right - Posição X: {0} ", playerX);
-                        Console.WriteLine();
+                        //playerX++; Caso queiram que o jogador apenas ande +1 e não aleatóriamente
+                        // Target random position in X, right
+                        playerX = r.Next(0, 1000);
+                        Console.WriteLine("Right - Position X: {0} ", playerX);
                         break;
 
                     case ConsoleKey.A:
-                        playerX--;
-                        Console.WriteLine("Left - Posição X: {0} ", playerX);
-                        Console.WriteLine();
+                        //playerX--; "" "" ""
+                        // Target random position in X, left
+                        playerX = r.Next(0, 1000);
+                        Console.WriteLine("Left - Position X: {0} ", playerX);
                         break;
 
                     case ConsoleKey.S:
-                        playerY--;
-                        Console.WriteLine("Down - Posição Y: {0} ", playerY);
-                        Console.WriteLine();
+                        //playerY--; "" "" ""
+                        // Target random position in Y, down
+                        playerY = r.Next(0, 1000);
+                        Console.WriteLine("Down - Position Y: {0} ", playerY);
                         break;
 
                     case ConsoleKey.W:
-                        playerY++;
-                        Console.WriteLine("Up - Posição Y: {0} ", playerY);
-                        Console.WriteLine();
+                        //playerY++; "" "" ""
+                        // Target random position in Y, up
+                        playerY = r.Next(0, 1000);
+                        Console.WriteLine("Up - Position Y: {0} ", playerY);
                         break;
 
+                    // IT IS WORKING!!!!!!!!!!!!
                     case ConsoleKey.Q:
-                        Console.WriteLine("O jogador terminou em:\nPosição X: {0}\nPosição Y: {1}", playerX, playerY);
+                        Console.WriteLine("\nLast Position in X: {0}", playerX);
+                        Console.WriteLine("Last Position in Y: {0}", playerY);
                         Environment.Exit(0);
                         break;
                 }
-                Console.WriteLine(targetPos.Key.ToString());
             } while (targetPos.Key != ConsoleKey.Escape);
+        }
 
-            Thread.Sleep(12000);
+        public void OnePath()
+        {
+            Random r = new Random();
+
+            #region Definição do tamanho do mapa
+            // t.InitTiles(tamanho_em_X, tamanho_em_Y);
+            TileManagement t = new TileManagement();
+            Console.WriteLine("O mapa a ser gerado será de 500px - 500px.");
+            t.InitTiles(500, 500);
+            #endregion
+
+            int playerX = 0;
+            int playerY = playerX;
+
+            for (int i = 0; i < 4; i++)
+            {
+
+            }
+
         }
     }
 }
