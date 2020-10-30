@@ -12,8 +12,6 @@ namespace Algoritmia
 {
     public class ExerciciosAlgoritmia
     {
-
-
         public void LetTheGamesBegin()
         {
             Console.WriteLine("Game Started");
@@ -237,10 +235,12 @@ namespace Algoritmia
             // mapValueY = int.Parse(Console.ReadLine());
 
             // Caso haja apenas um valor para X e Y:
-            mapValueX = 1000;
+            mapValueX = 30;
             mapValueY = mapValueX;
 
-            int player = 0;
+            // O player começa em 0, 0 :D
+            int playerX = 0;
+            int playerY = 0;
             Console.WriteLine("O mapa será de {0} por {1}.", mapValueX, mapValueY);
             Thread.Sleep(300);
 
@@ -256,43 +256,40 @@ namespace Algoritmia
 
             // Há um pequeno bug cada vez que eu pressiono uma tecla! Ela aparece, ao invés de não aparecer.
             // E eu não sei como consertar.
+
+            // Do-While para utilizar ConsoleKeys
             do
             {
-                int randPosX = r.Next(mapValueX);
-                int randPosY = r.Next(mapValueY);
                 targetPos = Console.ReadKey(true);
-
                 Console.WriteLine(" ");
                 switch (targetPos.Key)
                 {
                     case ConsoleKey.D:
-                        player++;
-                        Console.WriteLine("O jogador andou para a direita, agora está na posição X: {0} ", randPosX);
+                        playerX++;
+                        Console.WriteLine("Right - Posição X: {0} ", playerX);
                         Console.WriteLine();
                         break;
 
                     case ConsoleKey.A:
-                        player--;
-                        Console.WriteLine("O jogador andou para a esquerda, agora está na posição X: {0} ", randPosX);
+                        playerX--;
+                        Console.WriteLine("Left - Posição X: {0} ", playerX);
                         Console.WriteLine();
                         break;
 
                     case ConsoleKey.S:
-                        player++;
-                        Console.WriteLine("O jogador andou para baixo, agora está na posição Y: {0} ", randPosY);
+                        playerY--;
+                        Console.WriteLine("Down - Posição Y: {0} ", playerY);
                         Console.WriteLine();
                         break;
 
                     case ConsoleKey.W:
-                        player--;
-                        Console.WriteLine("O jogador andou para cima, agora está na posição Y: {0} ", randPosY);
+                        playerY++;
+                        Console.WriteLine("Up - Posição Y: {0} ", playerY);
                         Console.WriteLine();
                         break;
 
                     case ConsoleKey.Q:
-                        // "Em C# não existe a possibilidade de voltar atrás em um número gerado aleatóriamente"
-                        // - Moderador do servidor do discord C#/Dot.NET
-                        Console.WriteLine("O jogador terminou na posição X em: {0} e na posição Y em: {1} ", randPosX, randPosY);
+                        Console.WriteLine("O jogador terminou em:\nPosição X: {0}\nPosição Y: {1}", playerX, playerY);
                         Environment.Exit(0);
                         break;
                 }

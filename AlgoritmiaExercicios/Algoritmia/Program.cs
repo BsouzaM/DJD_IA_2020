@@ -13,6 +13,9 @@ namespace Algoritmia
             Thread.Sleep(3000);
             Console.Clear();
 
+            // Escreva aqui o primeiro programa a ser executado:
+            eA.LetsMove();
+
             #region Let The Games Begin
             eA.LetTheGamesBegin();
             Console.WriteLine("");
@@ -95,6 +98,7 @@ namespace Algoritmia
 
             #region Keep Randomizing
             Thread.Sleep(2000);
+            Console.Clear();
             eA.KeepRandomizing();
             Console.WriteLine("");
             #endregion
