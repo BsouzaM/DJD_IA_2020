@@ -256,7 +256,8 @@ namespace Algoritmia
             Console.WriteLine("\nA gerar o mapa...\n");
             t.InitTiles(mapValueX, mapValueY);
 
-            Console.WriteLine("\nW, A, S ou D.\nWhere do you want to move your character?");
+            Console.WriteLine("\nWhere do you want to move your character?");
+            Console.WriteLine("W - Up;\nA - Left;\nS - Down;\nD - Right;\nQ - Exit;");
 
 
             // Há um pequeno bug cada vez que eu pressiono uma tecla! Ela aparece, ao invés de não aparecer.
@@ -299,6 +300,7 @@ namespace Algoritmia
 
                     // IT IS WORKING!!!!!!!!!!!!
                     case ConsoleKey.Q:
+                        Console.WriteLine("You pressed Q to Exit");
                         Console.WriteLine("\nLast Position in X: {0}", playerX);
                         Console.WriteLine("Last Position in Y: {0}", playerY);
                         Environment.Exit(0);
@@ -323,7 +325,7 @@ namespace Algoritmia
 
             for (int i = 0; i < 4; i++)
             {
-
+                // Incompleto, favor não olhar. obg :))
             }
 
         }
