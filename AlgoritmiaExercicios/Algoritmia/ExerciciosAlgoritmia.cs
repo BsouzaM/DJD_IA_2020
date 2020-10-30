@@ -235,7 +235,7 @@ namespace Algoritmia
             // mapValueY = int.Parse(Console.ReadLine());
 
             // Caso haja apenas um valor para X e Y:
-            mapValueX = 30;
+            mapValueX = 1000;
             mapValueY = mapValueX;
 
             // O player começa em 0, 0 :D
