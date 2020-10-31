@@ -9,8 +9,7 @@ namespace Algoritmia
     public class TileManagement
     {
         public void InitTiles(int mapX, int mapY)
-        {
-            // Array Multi-dimensional com os valores mapX e mapY, que são os valores preenchidos por mapValueX e mapValueY em ExerciciosAlgoritmia.cs         
+        {        
             // Para cada iteração deste for loop, preencha todas as rows e cols.
             for (int rows = 0; rows < mapX; rows++)
             { 
