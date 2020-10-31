@@ -319,15 +319,6 @@ namespace Algoritmia
             Console.WriteLine("O mapa a ser gerado será de 500px - 500px.");
             t.InitTiles(500, 500);
             #endregion
-
-            int playerX = 0;
-            int playerY = playerX;
-
-            for (int i = 0; i < 4; i++)
-            {
-                // Incompleto, favor não olhar. obg :))
-            }
-
         }
     }
 }

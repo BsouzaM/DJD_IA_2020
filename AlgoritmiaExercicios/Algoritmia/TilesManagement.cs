@@ -10,13 +10,17 @@ namespace Algoritmia
     {
         public void InitTiles(int mapX, int mapY)
         {
+            // Array Multi-dimensional com os valores mapX e mapY, que são os valores preenchidos pelo utilizador
             int[,] map = new int[mapX, mapY];
+         
+            // Para cada iteração deste for loop, preencha todas as rows e cols.
             for (int rows = 0; rows < mapX; rows++)
-            {
+            { 
                 for (int cols = 0; cols < mapY; cols++)
                 {
                     Console.Write('X');
                 }
+                // Depois que é preenchido 1 cols, preenche 1 rows.
                 Console.WriteLine('X');
             }
         }
