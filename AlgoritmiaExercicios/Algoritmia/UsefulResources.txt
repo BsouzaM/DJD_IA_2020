@@ -3,10 +3,10 @@
 The Coding Train: https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw
 
 Nested Loop:
-1- https://www.youtube.com/watch?v=H7frvcAHXps
-2- https://www.youtube.com/watch?v=Fzyr94qBBKs
+1- [Link 1](https://www.youtube.com/watch?v=H7frvcAHXps)
+2- [Link 2](https://www.youtube.com/watch?v=Fzyr94qBBKs)
 
 Arrays:
-1- https://www.youtube.com/watch?v=47JBVxCWXJA
-2- https://www.youtube.com/watch?v=-sSRHRfK2EU
-3- https://www.youtube.com/watch?v=am6e1U2BHkA
+1- [Link 1](https://www.youtube.com/watch?v=47JBVxCWXJA)
+2- [Link 2](https://www.youtube.com/watch?v=-sSRHRfK2EU)
+3- [Link 3](https://www.youtube.com/watch?v=am6e1U2BHkA)
