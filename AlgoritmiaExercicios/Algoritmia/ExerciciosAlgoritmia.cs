@@ -239,7 +239,7 @@ namespace Algoritmia
             // mapValueY = int.Parse(Console.ReadLine());
 
             // Caso haja apenas um valor para X e Y:
-            mapValueX = 1000;
+            mapValueX = 10;
             mapValueY = mapValueX;
 
             // O player começa em 0, 0 :D
@@ -303,10 +303,11 @@ namespace Algoritmia
                         Console.WriteLine("You pressed Q to Exit");
                         Console.WriteLine("\nLast Position in X: {0}", playerX);
                         Console.WriteLine("Last Position in Y: {0}", playerY);
-                        Environment.Exit(0);
                         break;
                 }
-            } while (targetPos.Key != ConsoleKey.Escape);
+            } while (targetPos.Key != ConsoleKey.Q);
+            Thread.Sleep(3000);
+            Console.Clear();
         }
 
         public void OnePath()

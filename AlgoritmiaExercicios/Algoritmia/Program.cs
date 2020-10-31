@@ -7,14 +7,15 @@ namespace Algoritmia
     {
         static void Main(string[] args)
         {
+            #region Initialization
             ExerciciosAlgoritmia eA = new ExerciciosAlgoritmia();
-
             Console.WriteLine("Hello World!");
             Thread.Sleep(3000);
             Console.Clear();
+            #endregion
 
             // Escreva aqui o primeiro programa a ser executado:
-            eA.LetsMove();
+
 
             #region Let The Games Begin
             eA.LetTheGamesBegin();
@@ -53,14 +54,14 @@ namespace Algoritmia
             #endregion
 
             #region 
-            Thread.Sleep(3000);
-            Console.Clear();
+            Thread.Sleep(2000);
             eA.LuckyBastard();
             Console.WriteLine("");
             #endregion
 
             #region Vegito
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
+            Console.Clear();
             eA.Vegito();
             Console.WriteLine("");
             #endregion
@@ -72,8 +73,7 @@ namespace Algoritmia
             #endregion
 
             #region Roll
-            Thread.Sleep(3000);
-            Console.Clear();
+            Thread.Sleep(2000);
             eA.Roll();
             Console.WriteLine("");
             #endregion
@@ -85,7 +85,8 @@ namespace Algoritmia
             #endregion
 
             #region Time Over
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
+            Console.Clear();
             eA.TimeOver();
             Console.WriteLine("");
             #endregion
@@ -98,22 +99,23 @@ namespace Algoritmia
 
             #region Keep Randomizing
             Thread.Sleep(2000);
-            Console.Clear();
             eA.KeepRandomizing();
             Console.WriteLine("");
             #endregion
 
             #region Between Walls
-            eA.BetweenWalls();
             Thread.Sleep(2000);
+            eA.BetweenWalls();
             Console.WriteLine("");
             #endregion
 
             #region Lets Move
+            Thread.Sleep(3000);
+            Console.Clear();
             eA.LetsMove();
-            Thread.Sleep(2000);
             Console.WriteLine("");
             #endregion
+
         }
     }
 }

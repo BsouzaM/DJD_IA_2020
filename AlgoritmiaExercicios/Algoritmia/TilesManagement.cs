@@ -15,10 +15,10 @@ namespace Algoritmia
             { 
                 for (int cols = 0; cols < mapY; cols++)
                 {
-                    Console.Write('X');
+                    Console.Write('=');
                 }
                 // Depois que é preenchido 1 cols, preenche 1 rows.
-                Console.WriteLine('X');
+                Console.WriteLine('=');
             }
         }
     }
