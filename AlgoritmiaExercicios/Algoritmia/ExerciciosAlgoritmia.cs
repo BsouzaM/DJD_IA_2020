@@ -229,14 +229,6 @@ namespace Algoritmia
             TileManagement t = new TileManagement();
 
             int mapValueX, mapValueY;
-            ConsoleKeyInfo targetPos;
-
-            // Caso seja o utilizador a decidir o tamanho do mapa em X e Y:
-
-            // Console.WriteLine("Qual é o tamanho do mapa em X? ");
-            // mapValueX = int.Parse(Console.ReadLine());
-            // Console.WriteLine("Qual é o tamanho do mapa em Y? ");
-            // mapValueY = int.Parse(Console.ReadLine());
 
             // Caso haja apenas um valor para X e Y:
             mapValueX = 1000;
@@ -246,80 +238,56 @@ namespace Algoritmia
             int playerX = 0;
             int playerY = 0;
 
+            int destX = r.Next(0, mapValueX + 1);
+            int destY = r.Next(-10, mapValueY + 1);
+
             Console.Clear();
             Console.WriteLine("O mapa será de {0} por {1}.", mapValueX, mapValueY);
-            Console.WriteLine("\nO personagem está na posição\nX: {0}\nY: {1}", playerX, playerY);
+            Console.WriteLine("O destino será {0} em X e {1} em Y", destX, destY);
+            Console.WriteLine();
 
-            Console.WriteLine("\nPressione qualquer tecla para continuar");
-            Console.ReadKey();
-
-            Console.WriteLine("\nA gerar o mapa...\n");
-            t.InitTiles(mapValueX, mapValueY);
-
-            Console.WriteLine("\nWhere do you want to move your character?");
-            Console.WriteLine("W - Up;\nA - Left;\nS - Down;\nD - Right;\nQ - Exit;");
-
-
-            // Há um pequeno bug cada vez que eu pressiono uma tecla! Ela aparece, ao invés de não aparecer.
-            // E eu não sei como consertar.
-            // Do-While para utilizar ConsoleKeys
             do
             {
-                targetPos = Console.ReadKey(true);
-                Console.WriteLine(" ");
-
-                switch (targetPos.Key)
+                if (playerX < destX)
                 {
-                    case ConsoleKey.D:
-                        //playerX++; Caso queiram que o jogador apenas ande +1 e não aleatóriamente
-                        // Target random position in X, right
-                        playerX = r.Next(0, 1000);
-                        Console.WriteLine("Right - Position X: {0} ", playerX);
-                        break;
-
-                    case ConsoleKey.A:
-                        //playerX--; "" "" ""
-                        // Target random position in X, left
-                        playerX = r.Next(0, 1000);
-                        Console.WriteLine("Left - Position X: {0} ", playerX);
-                        break;
-
-                    case ConsoleKey.S:
-                        //playerY--; "" "" ""
-                        // Target random position in Y, down
-                        playerY = r.Next(0, 1000);
-                        Console.WriteLine("Down - Position Y: {0} ", playerY);
-                        break;
-
-                    case ConsoleKey.W:
-                        //playerY++; "" "" ""
-                        // Target random position in Y, up
-                        playerY = r.Next(0, 1000);
-                        Console.WriteLine("Up - Position Y: {0} ", playerY);
-                        break;
-
-                    // IT IS WORKING!!!!!!!!!!!!
-                    case ConsoleKey.Q:
-                        Console.WriteLine("You pressed Q to Exit");
-                        Console.WriteLine("\nLast Position in X: {0}", playerX);
-                        Console.WriteLine("Last Position in Y: {0}", playerY);
-                        break;
+                    playerX++;
+                    Console.WriteLine("Player moveu +1 em X.\nPosição X: {0}\nPosição Y: {1}", playerX, playerY);
+                    Console.WriteLine();
                 }
-            } while (targetPos.Key != ConsoleKey.Q);
-            Thread.Sleep(3000);
-            Console.Clear();
+                else if (playerX > destX)
+                {
+                    playerX--;
+                    Console.WriteLine("Player moveu -1 em X.\nPosição X: {0}\nPosição Y: {1}", playerX, playerY);
+                    Console.WriteLine();
+                }
+                else
+                {
+                    Console.WriteLine("Chegou no destino em X.\nPosição X: {0}\nPosição Y: {1}", playerX, playerY);
+                    Console.WriteLine();
+                }
+                if (playerY < destY)
+                {
+                    playerY++;
+                    Console.WriteLine("Player moveu +1 em Y.\nPosição X: {0}\nPosição Y: {1}", playerX, playerY);
+                    Console.WriteLine();
+                }
+                else if (playerY > destY)
+                {
+                    playerY--;
+                    Console.WriteLine("Player moveu -1 em Y.\nPosição X: {0}\nPosição Y: {1}", playerX, playerY);
+                    Console.WriteLine();
+                }
+                else
+                {
+                    Console.WriteLine("Chegou no destino em Y.\nPosição X: {0}\nPosição Y: {1}", playerX, playerY);
+                    Console.WriteLine();
+                }
+            } while (playerX != destX && playerY != destY);
+            Console.ReadLine();
         }
-
         public void OnePath()
         {
-            Random r = new Random();
 
-            #region Definição do tamanho do mapa
-            // t.InitTiles(tamanho_em_X, tamanho_em_Y);
-            TileManagement t = new TileManagement();
-            Console.WriteLine("O mapa a ser gerado será de 500px - 500px.");
-            t.InitTiles(500, 500);
-            #endregion
         }
     }
 }

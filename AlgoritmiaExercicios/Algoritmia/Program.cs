@@ -9,13 +9,14 @@ namespace Algoritmia
         {
             #region Initialization
             ExerciciosAlgoritmia eA = new ExerciciosAlgoritmia();
+            TarefasParaCasa tpc = new TarefasParaCasa();
             Console.WriteLine("Hello World!");
             Thread.Sleep(3000);
             Console.Clear();
             #endregion
 
             // Escreva aqui o primeiro programa a ser executado:
-
+            eA.LetsMove();
 
             #region Let The Games Begin
             eA.LetTheGamesBegin();
