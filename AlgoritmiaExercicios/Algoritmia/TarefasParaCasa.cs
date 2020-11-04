@@ -46,5 +46,22 @@ namespace Algoritmia
             Console.WriteLine("The average is: " + average);
             Console.ReadKey();
         }
+        // dado n numeros quero descobrir quais desses números são primos
+        public void NumerosPrimos()
+        {
+            Random r = new Random();
+            int n = r.Next(1, 51);
+            int checker = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                    checker++;
+            }
+            if (checker == 2)
+                Console.WriteLine("O número {0} é primo", n);
+            else
+                Console.WriteLine("O número {0} não é primo", n);
+        }
     }
 }

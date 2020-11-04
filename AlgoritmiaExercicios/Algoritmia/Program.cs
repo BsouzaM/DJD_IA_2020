@@ -16,7 +16,7 @@ namespace Algoritmia
             #endregion
 
             // Escreva aqui o primeiro programa a ser executado:
-            eA.LetsMove();
+            tpc.NumerosPrimos();
 
             #region Let The Games Begin
             eA.LetTheGamesBegin();
