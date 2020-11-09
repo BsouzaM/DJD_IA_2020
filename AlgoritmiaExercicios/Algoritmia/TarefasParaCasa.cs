@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace Algoritmia
 {
-    public class TarefasParaCasa
+    public class Tarefas
     {
         public void TPC01() // Given a group with N students, I want to know how many students have an average between 15 and 20 and which was the best average.
         {
@@ -62,6 +62,40 @@ namespace Algoritmia
                 Console.WriteLine("O número {0} é primo", n);
             else
                 Console.WriteLine("O número {0} não é primo", n);
+        }
+        // 2 Dice Rolls e se os números forem iguais, o programa termina.
+        public void BrackeysExercise_WhileLoop()
+        {
+            Random r = new Random();
+
+            Console.WriteLine("Watch as the computer slowly roll the dices for you (:");
+
+            int roll1 = 0;
+            int roll2 = 0;
+
+            int attempts = 0;
+
+            // O || é utilizado para a diferença. 
+            // Roll 1 deve ser igual a Roll 2.
+            while (roll1 != 1 || roll2 != 1)
+            {
+                Thread.Sleep(1000);
+
+                roll1 = r.Next(1, 100);
+                roll2 = r.Next(1, 100);
+
+                Console.WriteLine("Roll 1: " + roll1);
+                Console.WriteLine("Roll 2: " + roll2);
+                
+                Console.WriteLine("");
+
+                attempts++;
+                
+                if (roll1 == roll2)
+                    break;
+            }
+            Console.WriteLine("The computer tried " + attempts + " times until both numbers were equal!");
+            Console.WriteLine("");
         }
     }
 }
