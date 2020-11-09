@@ -86,16 +86,27 @@ namespace Algoritmia
 
                 Console.WriteLine("Roll 1: " + roll1);
                 Console.WriteLine("Roll 2: " + roll2);
-                
+
                 Console.WriteLine("");
 
                 attempts++;
-                
+
                 if (roll1 == roll2)
                     break;
             }
             Console.WriteLine("The computer tried " + attempts + " times until both numbers were equal!");
             Console.WriteLine("");
+        }
+
+        // Crie um algoritmo que diga todos os números entre 0 e 1
+        public void NumbersInBetween()
+        {
+
+            for (double i = 0; i <= 1; i += 0.1)
+            {
+                i = Math.Round(i, 2);
+                Console.WriteLine(i);
+            }
         }
     }
 }
