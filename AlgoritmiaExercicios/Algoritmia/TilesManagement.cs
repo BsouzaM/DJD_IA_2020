@@ -8,6 +8,7 @@ namespace Algoritmia
 {
     public class TileManagement
     {
+        // Um mapa em X e Y, caso for preciso para algum exercício.
         public void InitTiles(int mapX, int mapY)
         {        
             // Para cada iteração deste for loop, preencha todas as rows e cols.

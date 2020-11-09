@@ -287,7 +287,71 @@ namespace Algoritmia
         }
         public void OnePath()
         {
+            // Não consegui resolver... :c
+        }
 
+        public void SecretNumber()
+        {
+            Random r = new Random();
+            int secretNumber = r.Next(0, 101);
+            bool playerGuess = true;
+            while (playerGuess)
+            {
+                Console.WriteLine("What is the secret number?");
+                int guess = Convert.ToInt32(Console.ReadLine());
+
+                if (guess == secretNumber)
+                {
+                    Console.WriteLine("You found the secret number! Congratulations!");
+                    break;
+                }
+                else if (guess < secretNumber)
+                {
+                    Console.WriteLine("The secret number is greater than your guess.");
+                }
+                else
+                {
+                    Console.WriteLine("The secret number is smaller than your guess.");
+                }
+            }
+            Console.WriteLine("");
+        }
+
+        public void ShakeItBaby()
+        {
+            Random r = new Random();
+            bool flag = true;
+
+            Console.WriteLine("Quantos bursts a arma terá?");
+            int bursts = Convert.ToInt32(Console.ReadLine());
+
+            while (flag)
+            {
+                for (int i = 0; i < bursts; i++)
+                {   
+                    if (i == 10)
+                    {
+                        Console.WriteLine("Reload!");
+                        Thread.Sleep(2000);
+                    }
+                    else if (i > 10 && i == 20)
+                    {
+                        Console.WriteLine("Reload!");
+                        Thread.Sleep(2000);
+                    }
+                    else if (i > 20 && i == 30)
+                    {
+                        Console.WriteLine("Final Reload!");
+                        Thread.Sleep(2000);
+                        flag = false;
+                    }
+                    else
+                        flag = false;
+
+                    Console.WriteLine("Burst!");
+                }
+            }
+            Console.WriteLine("");
         }
     }
 }

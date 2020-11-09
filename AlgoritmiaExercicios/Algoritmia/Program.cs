@@ -11,12 +11,11 @@ namespace Algoritmia
             ExerciciosAlgoritmia eA = new ExerciciosAlgoritmia();
             TarefasParaCasa tpc = new TarefasParaCasa();
             Console.WriteLine("Hello World!");
-            Thread.Sleep(3000);
             Console.Clear();
             #endregion
 
             // Escreva aqui o primeiro programa a ser executado:
-            tpc.NumerosPrimos();
+            eA.ShakeItBaby();
 
             #region Let The Games Begin
             eA.LetTheGamesBegin();
