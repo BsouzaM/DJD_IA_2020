@@ -46,7 +46,7 @@ namespace Algoritmia
             Console.WriteLine("The average is: " + average);
             Console.ReadKey();
         }
-        // dado n numeros quero descobrir quais desses números são primos
+        // Dado n numeros, descubra quais desses números são primos
         public void NumerosPrimos()
         {
             Random r = new Random();
@@ -107,6 +107,42 @@ namespace Algoritmia
                 i = Math.Round(i, 2);
                 Console.WriteLine(i);
             }
+        }
+        // Crie um algoritmo que realize a média das notas dos alunos, 
+        // lembrando que a sala tem apenas 5 alunos e as notas variam de 0 a 10.
+        public void TryParseExercise()
+        {
+            Console.Clear();
+            Console.WriteLine("--- Média dos alunos ---");
+            float media = 0;
+            float soma = 0;
+
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.WriteLine("Digite a nota do aluno: {0}", i);
+
+                float nota = 0;
+
+                // Lê o que o input do utilizador e guarda na variável nota
+                float.TryParse(Console.ReadLine(), out nota);
+
+                if (nota > 10 || nota < 0)
+                {
+                    Console.WriteLine("Essa nota não é válida!");
+                    i -= 1;
+                }
+                else if (nota == 10)
+                    Console.WriteLine("Esse aluno é top");
+                else if (nota == 0)
+                    Console.WriteLine("Esse aluno é sad");
+                else
+                    soma += nota;
+
+                Console.WriteLine("");
+            }
+            media = soma / 5;
+            Console.WriteLine("A média dos alunos é de: {0}", media);
+            Console.ReadKey();
         }
     }
 }

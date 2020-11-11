@@ -15,7 +15,7 @@ namespace Algoritmia
             #endregion
 
             // Escreva aqui o primeiro programa a ser executado:
-            tpc.NumbersInBetween();
+            tpc.TryParseExercise();
 
             #region Let The Games Begin
             eA.LetTheGamesBegin();
