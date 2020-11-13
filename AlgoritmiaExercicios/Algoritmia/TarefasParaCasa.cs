@@ -114,17 +114,15 @@ namespace Algoritmia
         {
             Console.Clear();
             Console.WriteLine("--- Média dos alunos ---");
-            float media = 0;
+            float media;
             float soma = 0;
 
             for (int i = 1; i <= 5; i++)
             {
                 Console.WriteLine("Digite a nota do aluno: {0}", i);
 
-                float nota = 0;
-
-                // Lê o que o input do utilizador e guarda na variável nota
-                float.TryParse(Console.ReadLine(), out nota);
+                // Lê o input do utilizador e guarda na variável nota
+                float.TryParse(Console.ReadLine(), out float nota);
 
                 if (nota > 10 || nota < 0)
                 {

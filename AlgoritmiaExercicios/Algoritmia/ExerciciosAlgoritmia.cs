@@ -328,7 +328,7 @@ namespace Algoritmia
             while (flag)
             {
                 for (int i = 0; i < bursts; i++)
-                {   
+                {
                     if (i == 10)
                     {
                         Console.WriteLine("Reload!");
@@ -352,6 +352,78 @@ namespace Algoritmia
                 }
             }
             Console.WriteLine("");
+        }
+        public void AliAlwaysWins()
+        {
+            Random r = new Random();
+
+            int hp1 = 100;
+            int hp2 = 100;
+
+            int atkPlayer1, atkPlayer2;
+            int decisionP1, decisionP2;  // 0 - N faz nada, 1 - Attack, 2 - Block, 3 é exclusivo
+
+            // condition ? consequent : alternative
+            // is this condition true ? yes : no
+            // But I'm not using because it makes things hard
+
+            bool flag = true; // useful variable that doesn't make me feel confused. thanks teacher
+
+            while (flag)
+            {
+                atkPlayer1 = r.Next(0, 11);
+                atkPlayer2 = r.Next(0, 11);
+
+                decisionP1 = r.Next(0, 3);
+                decisionP2 = r.Next(0, 3);
+
+                Console.WriteLine("");
+                Console.WriteLine("Decisão do Player 1: {0}", decisionP1);
+                Console.WriteLine("Decisão do Player 2: {0}", decisionP2);
+                ConsoleKeyInfo round = Console.ReadKey();
+
+                if (decisionP1 == 1 && decisionP2 != 2) // Se a decisão do P1 for atacar e a do P2 não for defender
+                {
+                    hp2 -= atkPlayer1; // P2 toma dano
+                    Console.WriteLine("");
+                    Console.WriteLine("Player 1 atacou o Player 2!\nHP Player 2: {0}", hp2);
+                }
+                else if (decisionP1 == 2 && decisionP2 != 1) // Se a decisão do P1 for defender e a do P1 não for atacar
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Player 1 deu Block!");
+                }
+                else
+                { // Se não for nenhuma das duas acima
+                    Console.WriteLine("");
+                    Console.WriteLine("Player 1 não fez nada porque é preguiçoso");
+                }
+
+                if (decisionP2 == 1 && decisionP1 != 2) // Se a decisão do P2 for atacar e a do P1 não for defender
+                {
+                    hp1 -= atkPlayer2; // P1 toma dano
+                    Console.WriteLine("");
+                    Console.WriteLine("Player 2 atacou o Player 1!\nHP Player 1: {0}", hp1);
+                }
+                else if (decisionP2 == 2 && decisionP1 != 1) // Se a decisão do P2 for defender e a do P1 não for atacar
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Player 2 deu Block!");
+                }
+                else
+                { // Se não for nenhuma das duas acima
+                    Console.WriteLine("");
+                    Console.WriteLine("Player 2 não fez nada porque é preguiçoso");
+                }
+
+                // já tem muito if pra eu continuar a fazer esse exercício
+                // Não vale a pena gastar mais tempo assim se eu não consegui aprender a usar o operador "?"
+
+                if (hp1 <= 0 || hp2 <= 0)
+                {
+                    flag = false;
+                }
+            }
         }
     }
 }
