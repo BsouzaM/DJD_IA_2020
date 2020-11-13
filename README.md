@@ -1,8 +1,5 @@
 # DJD_IA_2020
-
-![Bob, the Barrel](https://i.imgur.com/AUCjiR5.png)
-
-This is Bob, the Barrel. He gives me luck every time I write an algorithm. If I fail, the next algorithm will always be better. Praise the Barrel!
+This repository is intended for all exercises in the discipline of "Introdução a Algoritmia" in the Polytechnic Institute of Maia in Porto, Portugal. The exercises performed from other sources are defined as a way to help me overcome difficulties.
 
 # Author
 * **Bernardo Medeiros** - [BsouzaM Github](https://github.com/BsouzaM)
