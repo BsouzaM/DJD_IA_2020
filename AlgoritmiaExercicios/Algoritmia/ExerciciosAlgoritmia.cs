@@ -425,5 +425,29 @@ namespace Algoritmia
                 }
             }
         }
+        public void Filli_n() // ler 20 notas e introduzir num array e descobrir a última nota positiva
+        {
+            Random r = new Random();
+            int[] numeros = new int[100];
+
+            for (int i = numeros.Length - 1; i > 0; i--)
+                if (numeros[i] >= 10)
+                {
+                    Console.WriteLine("Última nota positiva: {0}", numeros[i]);
+                }
+
+
+            for (int i = 0; i < 50; i++)
+            {
+                numeros[i] = i + 1;
+                if (i == 5)
+                {
+                    numeros[i + 5] = i * 10;
+                }
+            }
+
+            // Por algum motivo o primeiro for loop não aparece no console.
+            Console.ReadKey();
+        }
     }
 }
