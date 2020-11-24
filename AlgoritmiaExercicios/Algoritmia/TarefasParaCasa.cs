@@ -142,5 +142,18 @@ namespace Algoritmia
             Console.WriteLine("A média dos alunos é de: {0}", media);
             Console.ReadKey();
         }
+        // Faça um programa que eleve um número a outro e retorne o valor
+        public int GetPow(int basePow, int getPow)
+        {
+            int result = 1;
+
+            for (int i = 0; i < getPow; i++)
+            {
+                result = result * basePow;
+            }
+            Console.WriteLine(result);
+            Console.ReadLine();
+            return result;
+        }
     }
 }

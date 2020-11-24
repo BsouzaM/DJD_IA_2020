@@ -15,7 +15,8 @@ namespace Algoritmia
             #endregion
 
             // Escreva aqui o primeiro programa a ser executado:
-            eA.Leaderboard();
+            Console.WriteLine("Um valor será elevado a outro valor. Escreva os valores.\n");
+            tpc.GetPow(Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()));
 
             #region Let The Games Begin
             eA.LetTheGamesBegin();
