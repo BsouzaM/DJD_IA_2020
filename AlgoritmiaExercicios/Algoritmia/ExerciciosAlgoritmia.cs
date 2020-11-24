@@ -219,6 +219,8 @@ namespace Algoritmia
             }
         }
 
+        // a partir daqui começou a dar ré
+
         public void LetsMove()
         {
             // Moves a character's position frame by frame - wtf? Frame by frame significa runtime by runtime? Ou cada vez q eu pressiono um botão? Precisa ser explicado melhor.
@@ -445,9 +447,51 @@ namespace Algoritmia
                     numeros[i + 5] = i * 10;
                 }
             }
-
             // Por algum motivo o primeiro for loop não aparece no console.
             Console.ReadKey();
+        }
+
+        public void Raid()
+        {
+            Random r = new Random();
+            string[] characters = { "w", "w", "p", "m", "b", "r" };
+
+            for (int i = 0; i < 20; i++)
+            {
+                Console.WriteLine("{0}", characters[i]);
+                r.Next(0, 20);
+            }
+        }
+        public void Leaderboard()
+        {
+            Random r = new Random();
+            int num1 = r.Next(0, 1000);
+            int num2 = r.Next(0, 1000);
+            int num3 = r.Next(0, 1000);
+
+            int m1 = num1;
+            int m2 = num2;
+            int m3 = num3;
+
+            for (int i = 0; i < 20; i++)
+            {
+                if (num3 > num2 || num3 > num1)
+                {
+                    m1 = num3;
+                    Console.WriteLine("{0}", i);
+                    if (num2 > num3 || num2 > num1)
+                    {
+                        m1 = num2;
+                        Console.WriteLine("{0}", i);
+                        if (num1 > num2 || num1 > num3)
+                        {
+                            m1 = num1;
+                            Console.WriteLine("{0}", i);
+                        }
+                    }
+                }
+            }
+            Console.ReadLine();
         }
     }
 }

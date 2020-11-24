@@ -15,7 +15,7 @@ namespace Algoritmia
             #endregion
 
             // Escreva aqui o primeiro programa a ser executado:
-            eA.Filli_n();
+            eA.Leaderboard();
 
             #region Let The Games Begin
             eA.LetTheGamesBegin();
