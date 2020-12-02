@@ -493,5 +493,46 @@ namespace Algoritmia
             }
             Console.ReadLine();
         }
+        public void CheckLeaders()
+        {
+            Random r = new Random();
+            int[] players = new int[r.Next(0, 151)];
+            int numLeader = 0;
+
+            for (int i = 0; i < players.Length; i++)
+            {
+                for (int j = i + 1; j < players.Length; j++)
+                {
+                    // se o número gerado no fim é maior que os outros, break;
+                    // se numa posição aleatória um número gerado é maior que o anterior, pula o check desse numero
+                    // se o primeiro número é maior que o segundo, guarda esse valor em uma variavel
+                    // quando houver um último valor, break;
+                }
+            }
+        }
+        public void CommonGrounds()
+        {
+            Random r = new Random();
+            int num = 1;
+
+            int p1 = 10;
+            int p2 = 10;
+
+            int deck1;
+            int deck2;
+
+            // Check entre cartas
+            for (int i = 0; i < 52; i++)
+            {
+                deck1 = r.Next(1, 53);
+                deck2 = r.Next(1, 53);
+
+                if (deck1 == deck2)
+                {
+                    Console.WriteLine("Common card between decks: {0}", deck1);
+                    Console.WriteLine("Amount of cards in common between decks: {0}", num++);
+                }
+            }
+        }
     }
 }
