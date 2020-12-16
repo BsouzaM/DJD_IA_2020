@@ -534,5 +534,27 @@ namespace Algoritmia
                 }
             }
         }
+        public void SortArray()
+        {
+            int[] arrayTeste = { 1, 6, 26, 35, 11, 0 };
+
+            for (int i = 0; i < arrayTeste.Length; i++)
+            {
+                for (int j = i + 1; j < 1; j++)
+                {
+                    if (arrayTeste[i] > arrayTeste[j])
+                    {
+                        int temp = arrayTeste[j];
+                        arrayTeste[j] = arrayTeste[i];
+                        arrayTeste[i] = temp;
+                    }
+
+                    Console.WriteLine(arrayTeste[i]);
+                }
+            }
+            Console.ReadLine();
+            //  
+        }
     }
 }
+
