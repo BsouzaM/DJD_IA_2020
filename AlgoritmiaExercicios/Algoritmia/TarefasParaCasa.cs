@@ -155,5 +155,53 @@ namespace Algoritmia
             Console.ReadLine();
             return result;
         }
+
+        public void Matriz()
+        {
+            Random r = new Random();
+            int[,] mx = new int[r.Next(0, 10), r.Next(0, 10)];
+
+            for (int yy = 0; yy < mx.GetLength(0); yy++)
+            {
+                for (int xx = 0; xx < mx.GetLength(1); xx++)
+                {
+                    if (yy < mx.GetLength(0) / 2)
+                    {
+                        for (int i = 0; i < mx.GetLength(0); i++)
+                        {
+                            Console.WriteLine();
+                            for (int j = 0; j < mx.GetLength(1); j++)
+                            {
+                                if (i <= j)
+                                    Console.Write(mx[i, j] + " ");
+                                else
+                                    Console.Write(" ");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        mx[yy, xx] = 2;
+                    }
+                }
+            }
+        }
+        public void TriangularMatriz()
+        {
+            Random r = new Random();
+            int[,] mx = new int[r.Next(10, 15), r.Next(10, 15)];
+            for (int i = 0; i < mx.GetLength(0); i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < mx.GetLength(1); j++)
+                {
+                    if (i <= j)
+                        Console.Write(mx[i, j] + " ");
+                    else
+                        Console.Write(" ");
+                }
+            }
+            Console.ReadLine();
+        }
     }
 }

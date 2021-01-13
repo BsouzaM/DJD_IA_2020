@@ -15,7 +15,7 @@ namespace Algoritmia
             #endregion
 
             // Escreva aqui o primeiro programa a ser executado:
-            eA.SortArray();
+            tpc.Matriz();
             Console.Write("\n");
 
             #region Let The Games Begin
